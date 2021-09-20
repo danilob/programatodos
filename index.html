@@ -183,14 +183,9 @@
           Será necessário você possuir uma conta de e-mail do gmail para o acesso aos ambientes virtuais, recomenda-se também possuir um computador para realização das práticas
           e assistir melhor as aulas.</p>
           <br>
-          <div class="row incricao-breve">
-          <p>Em breve o link de inscrição... </p>
-          </div>
-          <div class="row incricao-iniciada" style="display:block">
-            <div class="control">
-                <a class="button button-primary button-block button-shadow" href="https://forms.gle/TJWsKPpGvV7vCR7R7">Clique Aqui para se Inscrever!</a>
-            </div>
-          </div>
+          
+          <p><b>Inscrições Encerradas</b></p>
+          
           
         </div>
 
@@ -259,26 +254,6 @@
   <script src="assets/js/main.js"></script>
 
 
-  <script>
-    var startTime = new Date('2021-09-20 08:42:00 AM');
-
-    function displayTime() {
-      let date = new Date();
-      
-      if(date>=startTime){
-        $(".incricao-breve").hide()
-        $(".incricao-iniciada").show()
-        clearInterval(createClock)
-        return;
-      }
-      $(".incricao-iniciada").hide()
-      $(".incricao-breve").show()
-      
-    }
-
-    const createClock = setInterval(displayTime, 1000);
-
-  </script>
 </body>
 
 </html>
