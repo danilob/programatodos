@@ -1,0 +1,12 @@
+.button-shadow {
+    padding: 5px;
+    display: block;
+    margin: 10px;
+    background: #0563BB;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
