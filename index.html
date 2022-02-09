@@ -184,17 +184,12 @@
           e assistir melhor as aulas.</p>
           <br>
           
-          <div class="row incricao-breve section-title justify-content-center">
+          <div class="row section-title justify-content-center">
             <center>
-            Tempo para liberação do link<br>
-            <b><span id="dias"></span> <span id="horas"></span>  <span id="minutos"></span> <span id="segundos"></span></b>
+            INSCRIÇÕES ENCERRADAS!<br>
           </center>  
           </div>
-            <div class="row incricao-iniciada" style="display:block">
-              <div class="control">
-                  <a class="button button-primary button-block button-shadow" href="https://forms.gle/CaVgfBMuuPCzcHAc6">Clique Aqui para se Inscrever!</a>
-              </div>
-            </div>
+            
           
           
         </div>
@@ -263,101 +258,6 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-    var startTime = new Date('2022-02-09 08:42:00 AM');
-
-    var falta = (startTime - new Date().getTime()) / 1000;
-        var segundos = Math.round(falta % 60);
-        var minutos = Math.round(falta / 60 % 60);
-        var horas = Math.floor(falta / 60 / 60 % 24);
-        var dias = Math.floor(falta / 60 / 60 / 24);
-    
-    function displayTime() {
-      let date = new Date();
-      
-      if(date>=startTime){
-        $(".incricao-breve").hide()
-        $(".incricao-iniciada").show()
-        clearInterval(createClock)
-        return;
-      }else{
-        
-        if (segundos == 0) {
-          segundos = 60;
-          minutos--;
-        }
-        if (minutos == 0) {
-          if(horas<=0){
-              minutos = 0 
-            }else{
-              minutos = 59;
-              horas--;
-            }
-            
-        }
-        if (horas == 0) {
-            if(dias<=0){
-              horas = 0 
-            }else{
-              horas = 23;
-              dias--;
-            }
-            
-        }
-        segundos--;
-        if(dias>0){
-          $("#dias").show()
-          if(dias==1){
-            $("#dias").html(dias+" dia,");
-          }else{
-            $("#dias").html(dias+" dias,");
-          } 
-        }else{
-          $("#dias").hide()
-        }
-        if(dias>0 || horas>0){
-          $("#horas").show()
-          if(horas>1){
-            $("#horas").html(horas+" horas");
-          }else{
-            $("#horas").html(horas+" hora");
-          }
-          
-        }else{
-          $("#horas").hide()
-        }
-        if(dias>0 || horas>0 || minutos>0){
-          $("#minutos").show()
-          if(minutos>1){
-            $("#minutos").html(minutos+" minutos");
-          }else{
-            $("#minutos").html(minutos+" minuto");
-          }
-          
-        }else{
-          $("#minutos").hide()
-        }
-        if(dias>0 || horas>0 || minutos>0 || segundos>=0){
-          $("#segundos").show()
-          if(segundos>1){
-            $("#segundos").html(segundos+" segundos");
-          }else{
-            $("#segundos").html(segundos+" segundo");
-          }
-          
-          
-        }else{
-          $("#segundos").hide()
-        }
-      }
-      $(".incricao-iniciada").hide()
-      $(".incricao-breve").show()
-      
-    }
-
-    const createClock = setInterval(displayTime, 1000);
-
-  </script>
 
 </body>
 
