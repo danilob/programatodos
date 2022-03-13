@@ -10,3 +10,11 @@
 a:hover {
     color: white;
 }
+
+.styled-own{
+    background: #f46211 !important;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #f46211 !important;
+}
